@@ -1,0 +1,777 @@
+@font-face{
+    font-family: 'Scriptin';
+    src: url("../fonts/Scriptin.ttf");
+}
+@font-face{
+    font-family: 'OpenSans-Bold';
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+@font-face{
+    font-family: 'OpenSans-Regular';
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face{
+    font-family: 'OpenSans-Light';
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+/* ---- layout override starts here ---- */
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.container.container-small {
+    max-width: 650px;
+}
+
+/* ---- layout override ends here ---- */
+
+/* ---- global css starts here ---- */
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.txt--white{
+    color: white;
+}
+
+.txt--yellow{
+    color: yellow;
+}
+
+.txt--gray{
+    color: #62686E;
+}
+
+.text-grey-dark {
+    color: #333 !important;
+}
+
+.txt--1{
+    font-size: 1rem;
+}
+
+.txt--38{
+    font-size: 3.8rem;
+}
+
+.txt--4{
+    font-size: 4rem;
+}
+
+.txt--5{
+    font-size: 4.5rem;
+}
+
+.txt--3{
+    font-size: 3rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-2xl{
+    font-size: 1.9rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.txt--center{
+    text-align: center;
+}
+
+.txt--bold{
+    font-weight: bold;
+    font-family: 'OpenSans-Bold';
+}
+
+.txt--light{
+    font-family: 'OpenSans-Light'
+}
+
+.txt--regular{
+    font-family: 'OpenSans-Regular';
+}
+
+.txt--special{
+    font-family: 'Scriptin';
+}
+
+.txt--height{
+    line-height: 1.7rem;
+}
+
+.txt--height-2{
+    line-height: 3rem;
+}
+
+.txt-in-20{
+    text-indent: -20px;
+}
+
+.py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.pt-4 {
+    padding-top: 1rem;
+}
+
+.pt-6{
+    padding-top: 0.5rem;
+}
+
+.pt-8 {
+    padding-top: 2rem;
+}
+
+.pt-10{
+    padding-top: 80px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.my-10 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.my-top-10{
+    margin-top: 10rem;
+}
+
+.items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mo-button {
+    width: max-content;
+}
+
+.mo-button a{
+    transition: all 500ms ease;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.mo-button a hr{
+    border-top-width: 3px;
+    width: calc(100% + 3em);
+    position: absolute;
+    transition: all 500ms ease;
+}
+
+.mo-button hr {
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.mo-button-left a hr{
+    border-top-width: 3px;
+    width: calc(100% + 3em);
+    position: absolute;
+    transition: all 500ms ease;
+}
+
+.mo-button-left hr{
+    transform: translateX(-50%);
+    left: 75%;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.block {
+    display: block;
+}
+
+.border-grey-dark {
+    border-color: #333;
+}
+
+.fl-left{
+    float: left;
+}
+
+@media (min-width: 992px){
+    .lg\:w-2\/3 {
+        width: 66.66667%;
+    }
+}
+
+.mrg-right{
+    margin-right: 160px;
+}
+
+/* ---- global css ends here ---- */
+
+/* ---- NAV - header starts ---- */
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 99;
+    -webkit-transition: 300ms padding ease;
+    -o-transition: 300ms padding ease;
+    transition: 300ms padding ease;
+    background-color: #fff;
+    color: #000;
+}
+
+.mo-logo{
+    color: #000;
+}
+
+@media (min-width: 769px){
+    .header{
+       background-color: #000;
+       color: #fff;
+    }
+    .mo-logo{
+        color: #fff;
+    }
+}
+
+
+.navbar-brand{
+    margin-right: 0;
+    padding: 0;
+}
+
+.navbar-brand img{
+    max-width: 70px;
+}
+
+.navbar-collapse {
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
+            align-self: stretch;
+}
+
+.top-menu {
+    margin-right: -15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.0rem;
+    -webkit-transition: 300ms padding, color ease;
+    -o-transition: 300ms padding, color ease;
+    transition: 300ms padding, color ease;
+}
+
+.header-sticky .navbar-light .navbar-nav .nav-link {
+    padding: 28px 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #212329;
+}
+
+@media (min-width: 769px){
+    .navbar-light .navbar-nav .nav-link {
+        color: #b6b6b6 !important;
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: #ffffff !important;
+}
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+/* ---- NAV - header ends ---- */
+
+/* ---- BANNER-1 - 1st section starts ---- */
+
+.section.section-head{
+    padding-top: 120px;
+    background-color: #000000;
+    display: block;
+    color: #ffffff;
+    height: 600px;
+}
+
+.middle-container-lg-xl{
+    margin: 0 auto;
+    float: right;
+}
+
+.middle-container-sm-md{
+    align-items: center;
+}
+
+
+.section-banner-lg-xl {
+    padding-top: 20px;
+    background-image: url('../img/okal-bg-lg-xl.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-banner-sm-md {
+    padding-top: 20px;
+    background-image: url('../img/okal-bg-sm-md.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #00000000 30%, #00000085 82%);
+}
+
+/* ---- BANNER-1 - 1st section ends ---- */
+
+/* ---- BANNER-2 - 1st section starts ---- */
+
+.section-banner-two-lg-xl {
+    padding-top: 20px;
+    background-image: url('../img/okal-bg-2-lg-xl.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-banner-two-sm-md {
+    padding-top: 20px;
+    background-image: url('../img/okal-bg-2-sm-md.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+}
+
+/* ---- BANNER-2 - 1st section ends ---- */
+
+/* ---- STORY - 2nd section starts ---- */
+
+.title-line{
+    width: 70px;
+}
+
+.border-t {
+    border-top-width: 1px;
+}
+
+.border-grey-dark {
+    border-color: #333;
+}
+
+.border-yellow{
+    border-color: yellow;
+}
+
+.border-yellow-move{
+    border-color: yellow;
+    -webkit-transition: width 2s;
+        transition: width 2s;
+}
+
+.border-yellow-move:hover{
+    border-color: yellow;
+    width: 200px;
+}
+
+.border-grey-dark-move {
+    border-color: #333;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+
+.border-grey-dark-move:hover{
+    border-color: #333;
+    width: 100px;
+}
+
+.opacity-50 {
+    opacity: .5;
+}
+
+/* ---- STORY - 2nd section ends ---- */
+
+/* ---- QUOTE - 3rd section starts ---- */
+
+.quote-box{
+    display: block;
+    height: 609px;
+    width: 650px;
+    width: 100%;
+    background-color: #212329;
+    position: relative;
+}
+
+.quote-box-txt::before{
+    content: "";
+    background-image: url("../img/mo-quote-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -25px;
+}
+
+.quote-box-txt{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 30;
+}
+
+@media (max-width: 300px){
+    .quote-box{
+        height: 540px;
+    }
+}
+
+@media (max-width: 768px){
+    .quote-box-txt{
+        padding-right: 20px;
+        top: 17%;
+    }
+}
+
+.mo-sign::before{
+    content: "";
+    background-image: url("../img/logo/mo-sign.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    height: 75px;
+    width: 200px;
+    position: absolute;
+    bottom: -45px;
+}
+
+.okal-climb{
+    display: block;
+    max-width: 480px;
+    position: absolute;
+    top: -20px;
+    left: -58px;
+}
+
+.okal-climb img{
+    width: 100%;
+}
+
+/* ---- QUOTE - 3rd section ends ---- */
+
+/* ---- PARTNERS - 4th section starts ---- */
+/* Slider start */
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus
+{
+    outline: none;
+}
+
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/* Slider ends */
+/* ---- PARTNERS - 4th section ends ---- */
+
+/* ---- PROJECTS - 5th section starts ---- */
+
+.proj-img-box{
+    display: block;
+    max-width: 300px;
+}
+
+.proj-img-box img{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    .proj-img-box{
+        padding-top: 80px;
+    }
+}
+
+/* ---- PROJECTS - 5th section ends ---- */
+
+/* ---- REACH - 7th section starts ---- */
+.section-reach{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #212329;
+    display: block;
+    color: #ffffff;
+}
+
+.okal-book{
+    display: block;
+    max-width: 300px;
+}
+
+.okal-book img{
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .okal-book{
+        max-width: 450px;
+    }
+}
+
+.mo-grey-button{
+    display: block;
+    max-width: 250px;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: #212329;
+    position: absolute;
+    bottom: -2px;
+}
+
+.mo-grey-button::after{
+    content: "";
+    display: block;
+    box-shadow: 1px 62px 0px 1px yellow;
+    width: 100px;
+    opacity: 0.7;
+}
+
+.mo-grey-button:hover::after{
+    animation: expand 4s infinite;
+}
+
+@keyframes expand{
+    0%{
+        width: 100px;
+    }
+    100%{
+        width: 200px;
+    }
+}
+
+.mo-button-sit{
+    position: absolute;
+    top: 10px;
+}
+
+.mo-button-sit a, .mo-button-sit a:hover{
+    color: white;
+}
+
+/* ---- REACH - 7th section ends ---- */
+
+/* ---- footer starts here  ---- */
+
+.footer {
+    background-color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    color: #9A9A9A;
+    text-align: left;
+}
+
+.copyright-text {
+    font-size: 0.7rem;
+}
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+  
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: #212329;
+}
+  
+.svg-icon circle {
+    stroke: #212329;
+    stroke-width: 1;
+}
+
+@media (min-width: 992px){
+    .footer-list{
+        float: right;
+    }
+}
+
+/* ---- footer ends here  ---- */
